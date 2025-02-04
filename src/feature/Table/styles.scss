@@ -1,0 +1,23 @@
+@import "../../styles/colors";
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.table-header {
+  background-color: $light-color;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid $secondary-color;
+}
+
+.table-row:nth-child(even) {
+  background-color: $light-color;
+}
+
+.table-cell {
+  padding: 10px;
+  border: 1px solid $secondary-color;
+}

@@ -1,0 +1,22 @@
+@import "../../styles/colors";
+
+.footer {
+  padding: 20px;
+  background-color: $light-color;
+  text-align: center;
+  border-top: 1px solid $secondary-color;
+}
+
+.footer-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $primary-color;
+  color: $light-color;
+}
+
+.footer-button:hover {
+  background-color: $dark-color;
+}

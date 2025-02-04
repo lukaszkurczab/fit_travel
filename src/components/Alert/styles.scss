@@ -1,0 +1,23 @@
+@import "../../styles/colors";
+
+.alert {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.alert-success {
+  background-color: $success-color;
+  color: $dark-color;
+}
+
+.alert-error {
+  background-color: $danger-color;
+  color: $dark-color;
+}
+
+.alert-warning {
+  background-color: $warning-color;
+  color: $dark-color;
+}
