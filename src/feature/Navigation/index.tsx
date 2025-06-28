@@ -24,7 +24,7 @@ export default function Navigation() {
           <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
             <NavLink url="/" text="Home" />
             <NavLink url="/map" text="Find gym" />
-            <NavLink url="/knowledge" text="Knowledge" />
+            <NavLink url="/blog" text="Knowledge" />
           </div>
 
           <div className="hidden sm:ml-6 sm:flex sm:items-center">

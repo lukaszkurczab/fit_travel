@@ -1,16 +1,33 @@
-export const Checkbox: React.FC<{
-  id?: string;
+"use client";
+
+interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   checked: boolean;
   onCheckedChange: (checked: boolean) => void;
-  className?: string;
-}> = ({ id, checked, onCheckedChange, className }) => {
+}
+
+export const Checkbox = ({
+  checked,
+  onCheckedChange,
+  className,
+  children,
+}: CheckboxProps) => {
+  const handleCheckboxChange = () => {
+    onCheckedChange(!checked);
+  };
   return (
-    <input
-      id={id}
-      type="checkbox"
-      checked={checked}
-      onChange={(e) => onCheckedChange(e.target.checked)}
-      className={`w-4 h-4 cursor-pointer ${className}`}
-    />
+    <div className="flex items-center gap-2">
+      <input
+        type="checkbox"
+        checked={checked}
+        onChange={() => handleCheckboxChange()}
+        className={`w-4 h-4 cursor-pointer ${className}`}
+      />
+      <p
+        className="text-black hover:cursor-pointer"
+        onClick={() => handleCheckboxChange()}
+      >
+        {children}
+      </p>
+    </div>
   );
 };

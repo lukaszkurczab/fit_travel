@@ -1,10 +1,20 @@
+import { twMerge } from "tailwind-merge";
+
 export const Button: React.FC<
-  React.ButtonHTMLAttributes<HTMLButtonElement>
-> = ({ children, className, ...props }) => {
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    variant?: "default" | "text";
+  }
+> = ({ children, className, variant = "default", ...props }) => {
+  const baseStyles = "px-4 py-2 rounded";
+  const variants = {
+    default: "bg-blue-500 text-white hover:bg-blue-600",
+    text: "text-blue-500 hover:underline",
+  };
+
   return (
     <button
       {...props}
-      className={`bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ${className}`}
+      className={twMerge(`${baseStyles} ${variants[variant]} ${className}`)}
     >
       {children}
     </button>
